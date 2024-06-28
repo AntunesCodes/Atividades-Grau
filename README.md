@@ -1,2 +1,3 @@
 # Atividades-Grau
-atividades feitas em casa grua
+atividades feitas EM AULA 
+
