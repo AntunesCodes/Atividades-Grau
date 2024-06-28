@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Yu-Gi-Oh! - Card</title>
+    <style>
+        /* Estilo básico para todas as estrelas */
+        .star {
+            width: 20px;
+            height: 20px;
+            background-image: url('./assents/stars.png'); /* Caminho para sua imagem star.png */
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        /* Posicionamento da primeira estrela */
+        .star-1 {
+            float: left; /* Alinha à esquerda */
+            margin-right: 5px; /* Espaçamento entre as estrelas */
+        }
+
+        /* Posicionamento da segunda estrela */
+        .star-2 {
+            float: left; /* Alinha à esquerda */
+            margin-right: 5px; /* Espaçamento entre as estrelas */
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="card">
+            <div class="content">
+                <header>
+                    <h2>
+                        <span>C</span>YBER <span>-</span>STEIN
+                    </h2>
+                    <div class="element"></div>
+                </header>
+                <div class="star-container">
+                    <div class="star star-1"></div>
+                    <div class="star star-2"></div>
+                </div>
+                <figure>
+                    <div class="bg-figure">
+                        <img src="./assents/figure.png" alt="Character">
+                    </div>
+                </figure>
+                <div class="description-container">
+                    <div class="description-content">
+                        <div class="tipo">[<span>MACHINE</span>/EFFECT]</div>
+                        <p>You can pay 5000 LP, Special Summon 1 Fusion Monster from your Extra Deck in Attack Position.</p>
+                        <div class="points-container">
+                            <div class="atak">ATK/<span>700</span></div>
+                            <div class="atak">DEF/<span>500</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- content end -->
+        </div><!-- card end -->
+    </div><!-- wrapper end -->
+</body>
+</html>
+
+
+
+

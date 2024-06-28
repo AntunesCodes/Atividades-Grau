@@ -1,0 +1,153 @@
+/* Estilos adicionais para o flip card */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    background-color: #fff;
+    border: 4px solid #ff0000;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 300px;
+    position: relative;
+    transform-style: preserve-3d; /* Preserva a perspectiva para as animações 3D */
+    transition: transform 0.6s;
+    margin: 20px;
+}
+
+.card:hover {
+    transform: rotateY(180deg); /* Gira 180 graus no eixo Y ao passar o mouse */
+}
+
+.content {
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transform-style: preserve-3d; /* Garante que os elementos internos respeitem a perspectiva */
+}
+
+header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+header h2 {
+    font-size: 24px;
+    margin: 0;
+    text-transform: uppercase;
+    color: #ff9900;
+}
+
+.element {
+    height: 8px;
+    background-color: #ff9900;
+    margin: 10px 0;
+    border-radius: 2px;
+}
+
+/* Estilo básico para todas as estrelas */
+.star {
+    width: 50px;
+    height: 50px;
+    background-image: url('./assents/stars.png'); /* Caminho para sua imagem star.png */
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+/* Posicionamento da primeira estrela */
+.star-1 {
+    float: left; /* Alinha à esquerda */
+    margin-right: 5px; /* Espaçamento entre as estrelas */
+    margin-left: 10px;
+}
+
+/* Posicionamento da segunda estrela */
+.star-2 {
+    float: left; /* Alinha à esquerda */
+    margin-right: 5px; /* Espaçamento entre as estrelas */
+    margin-left: 10px;
+}
+
+
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+.bg-figure {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.bg-figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.description-container {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transform-style: preserve-3d; /* Garante a preservação da perspectiva para os conteúdos */
+}
+
+.tipo {
+    font-weight: bold;
+    color: #777;
+    text-transform: uppercase;
+}
+
+.description-content {
+    margin-top: 10px;
+}
+
+.description-content p {
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.points-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.atak {
+    font-weight: bold;
+    color: #333;
+}
+
+.atak span {
+    color: #777;
+    margin-left: 5px;
+}
+
+/* Efeito de hover */
+.card:hover {
+    transform: rotateY(180deg); /* Gira 180 graus no eixo Y ao passar o mouse */
+}
+
