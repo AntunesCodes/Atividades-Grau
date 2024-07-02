@@ -3,66 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Yu-Gi-Oh! - Card</title>
+    <link rel="stylesheet" href="style.css">
     <style>
-        /* Estilo básico para todas as estrelas */
-        .star {
+        /* Estilos gerais */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .card header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card header h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .element {
+            display: inline-block;
             width: 20px;
             height: 20px;
-            background-image: url('./assents/stars.png'); /* Caminho para sua imagem star.png */
+            background-color: #ffcc00; /* Cor do elemento, ajuste conforme necessário */
+            vertical-align: middle;
+        }
+
+        /* Estilos para as estrelas */
+        .star-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .star {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin: 0 3px;
+            background-image: url('./assets/stars.png'); /* Caminho da imagem das estrelas */
             background-size: contain;
             background-repeat: no-repeat;
+            animation: starAnimation 3s ease-in-out infinite;
         }
 
-        /* Posicionamento da primeira estrela */
-        .star-1 {
-            float: left; /* Alinha à esquerda */
-            margin-right: 5px; /* Espaçamento entre as estrelas */
+        @keyframes starAnimation {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
         }
 
-        /* Posicionamento da segunda estrela */
-        .star-2 {
-            float: left; /* Alinha à esquerda */
-            margin-right: 5px; /* Espaçamento entre as estrelas */
+        /* Estilos para a figura */
+        .bg-figure {
+            text-align: center;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .bg-figure img {
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+            border-radius: 8px; /* Arredonda as bordas da imagem */
+        }
+
+        .bg-figure img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Estilos para a descrição */
+        .description-content {
+            text-align: left;
+        }
+
+        .tipo {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .description-content p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .points-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        .points-container .atak {
+            margin: 0 10px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="wrapper">
         <div class="card">
-            <div class="content">
-                <header>
-                    <h2>
-                        <span>C</span>YBER <span>-</span>STEIN
-                    </h2>
-                    <div class="element"></div>
-                </header>
-                <div class="star-container">
+            <header>
+                <h1>CYBER STEIN</h1>
+                <div class="element" aria-label="Elemento do card"></div>
+            </header>
+            <section class="content">
+                <div class="star-container" aria-label="Avaliação do card">
                     <div class="star star-1"></div>
                     <div class="star star-2"></div>
                 </div>
-                <figure>
-                    <div class="bg-figure">
-                        <img src="./assents/figure.png" alt="Character">
-                    </div>
+                <figure class="bg-figure">
+                    <img src="./assents/figure.png" alt="Imagem do personagem">
                 </figure>
-                <div class="description-container">
-                    <div class="description-content">
-                        <div class="tipo">[<span>MACHINE</span>/EFFECT]</div>
-                        <p>You can pay 5000 LP, Special Summon 1 Fusion Monster from your Extra Deck in Attack Position.</p>
-                        <div class="points-container">
-                            <div class="atak">ATK/<span>700</span></div>
-                            <div class="atak">DEF/<span>500</span></div>
-                        </div>
+                <section class="description-content">
+                    <div class="tipo">[MÁQUINA/EFEITO]</div>
+                    <p>Você pode pagar 5000 PV para Invocar por Invocação-Especial 1 Monstro de Fusão do seu Deck Adicional em Posição de Ataque.</p>
+                    <div class="points-container">
+                        <div class="atak">ATK/<span>700</span></div>
+                        <div class="atak">DEF/<span>500</span></div>
                     </div>
-                </div>
-            </div><!-- content end -->
+                </section>
+            </section>
         </div><!-- card end -->
     </div><!-- wrapper end -->
 </body>
 </html>
-
 
 
 
